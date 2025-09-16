@@ -10,5 +10,5 @@ export const veiculo = pgTable("veiculo", {
 });
 
 export const veiculoRelations = relations(veiculo, ({ many }) => ({
-	posts: many(acessorio),
+	acessorio: many(acessorio),
 }));
