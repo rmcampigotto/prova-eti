@@ -87,8 +87,7 @@ Configurações no `drizzle.config.ts`.
 ## 📝 Convenções de Commit
 
 Este projeto utiliza como base para commits o padrão [Conventional
-Commits](https://www.conventionalcommits.org/).  
-Consulte o guia em [`padrao-commits.txt`] no Drive do projeto.
+Commits](https://www.conventionalcommits.org/).
 
 ## 📄 Licença
 
