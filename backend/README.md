@@ -1,98 +1,95 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Prova - Backend
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Backend da prova da **Escola de TI - 2025**, desenvolvido por **Rafael Campigotto - RA: 22014205-2**.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## 📌 Tecnologias
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+-   [NestJS](https://nestjs.com/) (framework backend em Node.js)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [PostgreSQL](https://www.postgresql.org/) (banco de dados
+    relacional)
+-   [Drizzle ORM](https://orm.drizzle.team/) (mapeamento
+    objeto-relacional)
+-   [Docker Compose](https://docs.docker.com/compose/) (containerização)
 
-## Project setup
 
-```bash
-$ npm install
+## 🚀 Scripts disponíveis
+
+### Desenvolvimento
+
+``` bash
+npm run start:dev
 ```
 
-## Compile and run the project
+Inicia o servidor em modo desenvolvimento com **hot reload**.
 
-```bash
-# development
-$ npm run start
+### Build
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+``` bash
+npm run build
 ```
 
-## Run tests
+Compila o projeto TypeScript para JavaScript.
 
-```bash
-# unit tests
-$ npm run test
+### Produção
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+``` bash
+npm start
 ```
 
-## Deployment
+Inicia o servidor já compilado.
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+### Docker
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+``` bash
+npm run docker
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+## ⚙️ Requisitos
 
-## Resources
+-   **Node.js** \>= 20
+-   **NPM** \>= 10
+-   **Docker** e **Docker Compose**
+-   Banco de dados **PostgreSQL**
 
-Check out a few resources that may come in handy when working with NestJS:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+## 📂 Estrutura do Projeto (NestJS)
 
-## Support
+    backend/
+     ├── src/
+     │   ├── db/
+     │   │   ├── drizzle/   # Configuração do ORM Drizzle
+     │   │   ├── schemas/   # Schemas do proejto (Tabelas Banco de Dados)
+     |   ├── modules/       # Módulos organizados por domínio
+     │   ├── app.module.ts  # Módulo raiz    
+     │   ├── main.ts        # Ponto de entrada da aplicação
+     ├── docker-compose.yml # Arquivo de container do PostgreSQL
+     └── drizzle.config.ts  # Configruações do ORM Drizzle
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-## Stay in touch
+## 🛠️ Banco de Dados (Drizzle ORM)
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+-   Gerar migrações:
 
-## License
+``` bash
+npm run drizzle-g
+```
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+-   Rodar migrações:
+
+``` bash
+npm run drizzle-m
+```
+
+Configurações no `drizzle.config.ts`.
+
+## 📝 Convenções de Commit
+
+Este projeto utiliza como base para commits o padrão [Conventional
+Commits](https://www.conventionalcommits.org/).  
+Consulte o guia em [`padrao-commits.txt`] no Drive do projeto.
+
+## 📄 Licença
+
+Este projeto é **privado**.
